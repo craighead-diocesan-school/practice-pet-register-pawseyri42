@@ -21,5 +21,9 @@ function addPet() {
   }
 
   // push the pet object onto the pets array
-  nameArray 
+  nameArray.push(pet)
+}
+
+function animalRecord() {
+alert("button is working")
 }
