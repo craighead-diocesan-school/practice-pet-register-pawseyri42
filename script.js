@@ -9,18 +9,17 @@ let nameArray = [
 
 function addPet() {
   // lets user input the name of the pet
-  let animalName = prompt("What is the name of the pet?")
-  // add a new name to add to array of names
-  nameArray.push(animalName)
-}
+  let name = prompt("What is the name of the pet?")
+  let age = prompt("What is the age of " + name + "?")
+  let species = prompt ("What species is " + name + "?")
 
-function addAge() {
-  //lets ask the user the age of her recorded pet
-let animalAge = prompt("What is the age of " + animalName + "?")
-}
+  // make an object called 'pet' from the details you got
+  let pet = {
+    name: name,
+    age: age,
+    species: species
+  }
 
-function addSpecies() {
-//ask the user the species of her chosen pet
-let addSpecies = prompt ("What species is " + animalName + "?")
-
+  // push the pet object onto the pets array
+  nameArray 
 }
