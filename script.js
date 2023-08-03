@@ -25,7 +25,7 @@ function addPet() {
   let pet = {
     name: name,
     age: age,
-    species: species
+    species: species,
   }
 
   // push the pet object onto the pets array
@@ -41,9 +41,31 @@ function removePet() {
   }
 
   //get the index of the pet to remove
-let indextoRemove = prompt ('which pet do you want to remove from the record?')
+  let indextoRemove = prompt('which pet do you want to remove from the record?')
 
   //Remove the pet at the index 
-pets.splice(indextoRemove, 1)
+  pets.splice(indextoRemove, 1)
 }
 
+function searchPet() {
+  //fetch name of pet user is wanting to search for
+  let petToSearchFor = prompt('what is the name of the pet you want to find?')
+
+  //create a variable to store whether or not it found it
+  let searchResult = false
+
+  //check each pet's name to see if it's the pet we're looking for, update if so 
+  let (let pet of pets) {
+    if (pet.name == petToSearchFor) {
+      searchResult = true
+    }
+  }
+
+  //output whether the search found the pet or not
+if (searchResult == true ) {
+alert ('Found the pet you were looking for!')
+} else { 
+  alert ('Didnt find the pet you were looking for.')
+}
+
+}
